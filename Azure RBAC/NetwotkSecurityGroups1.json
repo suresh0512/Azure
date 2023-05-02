@@ -1,9 +1,9 @@
 {
     "properties": {
-        "roleName": "skslearning_custRole_ResourceGroups",
+        "roleName": "**role_name**",
         "description": "",
         "assignableScopes": [
-            "/subscriptions/9c723280-5433-4507-86b2-ece6dacea332"
+            "/subscriptions/**subscription_id**"
         ],
         "permissions": [
             {

@@ -1,10 +1,10 @@
 {
-    "id": "/subscriptions/9c723280-5433-4507-86b2-ece6dacea332/providers/Microsoft.Authorization/roleDefinitions/59c3f281-2b93-481a-95ad-4ac98575903c",
+    "id": "/subscriptions/**subscription_id**/providers/Microsoft.Authorization/roleDefinitions/59c3f281-2b93-481a-95ad-4ac98575903c",
     "properties": {
         "roleName": "skslearning_RG_policies",
         "description": "This is a custom Role created for skslearning Organization for Resource Groups",
         "assignableScopes": [
-            "/subscriptions/9c723280-5433-4507-86b2-ece6dacea332/resourceGroups/vm1_group"
+            "/subscriptions/**subscription_id**/resourceGroups/**resource_group**"
         ],
         "permissions": [
             {
