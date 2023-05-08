@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "networkSecurityGroupName": {
+            "type": "string",
+			"defaultValue": "NSG_VM1",
+            "metadata": {
+                "description": "This is the name of the network security group"
+            }
+        },
+        "location": {
+            "type": "string",
+			"defaultValue": "eastus",
+            "metadata": {
+                "description": "Location where the network security group resource will be created."
+            }
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2019-02-01",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[parameters('networkSecurityGroupName')]",
+            "location": "[parameters('location')]",
+            "tags": {
+                "NonProd": "NonProduction-nsg"
+            }
+        }
+    ]
+}
