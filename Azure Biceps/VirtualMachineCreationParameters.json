@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "networkInterfaceName": {
+      "value": "vm2240"
+    },
+    "networkSecurityGroupName": {
+      "value": "vm2-nsg"
+    },
+    "subnetName": {
+      "value": "vm2subnet"
+    },
+    "virtualNetworkName": {
+      "value": "vm2-vnet"
+    },
+    "publicIpAddressName": {
+      "value": "vm2-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Static"
+    },
+    "publicIpAddressSku": {
+      "value": "Standard"
+    },
+    "virtualMachineName": {
+      "value": "vm2"
+    },
+    "virtualMachineComputerName": {
+      "value": "vm2"
+    },
+    "adminUsername": {
+      "value": "<user_id>"
+    },
+    "pipDeleteOption": {
+      "value": "Detach"
+    },
+    "osDiskType": {
+      "value": "Standard_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_B1s"
+    },
+    "nicDeleteOption": {
+      "value": "Detach"
+    },
+    "adminPassword": {
+      "value": "<password for the VM>"
+    }
+  }
+}
