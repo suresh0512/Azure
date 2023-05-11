@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.17.1.54307",
+      "templateHash": "11309593345699648310"
+    }
+  },
+  "parameters": {
+    "s_name": {
+      "type": "string",
+      "defaultValue": "skslabstorage"
+    },
+    "s_loc": {
+      "type": "string",
+      "defaultValue": "southindia"
+    },
+    "tag_value": {
+      "type": "string",
+      "defaultValue": "non-prod"
+    },
+    "acc_tier": {
+      "type": "string",
+      "defaultValue": "cool"
+    },
+    "tls_version": {
+      "type": "string",
+      "defaultValue": "TLS1_2"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2021-02-01",
+      "name": "[parameters('s_name')]",
+      "location": "[parameters('s_loc')]",
+      "kind": "StorageV2",
+      "tags": {
+        "nonprod": "[parameters('tag_value')]"
+      },
+      "properties": {
+        "allowBlobPublicAccess": false,
+        "accessTier": "[parameters('acc_tier')]",
+        "allowSharedKeyAccess": false,
+        "minimumTlsVersion": "[parameters('tls_version')]",
+        "supportsHttpsTrafficOnly": true
+      },
+      "sku": {
+        "name": "Standard_LRS"
+      }
+    }
+  ]
+}
