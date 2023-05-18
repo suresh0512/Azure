@@ -1,0 +1,28 @@
+{
+    "properties": {
+        "roleName": "TolearnCloudTech_CustomRole",
+        "description": "TolearnCloudTech_CustomRole",
+        "assignableScopes": [
+            "/subscriptions/5c376bdc-1eab-4066-afd6-2bd16c10cfc5"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Compute/virtualMachineScaleSets/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/write",
+                    "Microsoft.Compute/virtualMachines/powerOff/action",
+                    "Microsoft.Compute/virtualMachineScaleSets/restart/action"
+		    "Microsoft.Compute/virtualMachines/create"
+                ],
+                "notActions": [
+                    "Microsoft.Compute/virtualMachineScaleSets/delete",
+                    "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/delete",
+                    "Microsoft.Compute/virtualMachines/redeploy/action",
+                    "Microsoft.Compute/virtualMachines/delete"
+                ],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
